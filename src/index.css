@@ -48,13 +48,13 @@ body {
 .header {
   color: rgba(0,0,0,.8);
   font-size: 24px;
-  padding: 10px;
+  padding: 25px;
 }
 
 .btn {
   display: block;
-  background: black;
-  color: white;
+  background: #D8AA96;
+  color: rgb(232, 229, 229);
   border: none;
   padding: 5px 15px;
   margin-top: 20px;
@@ -63,6 +63,7 @@ body {
   text-decoration: none;
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
+  border-radius: 2px;
 }
 
 .btn:focus {
@@ -97,10 +98,9 @@ body {
 }
 
 .form-control input {
-  width: 90%;
   margin-left: 10x;
   margin-bottom: 0px;
-  height: 25px;
+  height: 30px;
   padding: 3px 10px;
   font-size: 0.9em;
   opacity: 0.7;
@@ -129,22 +129,22 @@ label {
 
 .radio-container input {
   font-family: 'Poppins', sans-serif;
-  height: 100%;
   appearance: none;
   outline: none;
   cursor: pointer;
-  padding: 4px 8px;
+  padding: 3px 10px;
   color: rgba(0,0,0,.8);
   font-size: 12px;
   font-family: 'Poppins', sans-serif;
-  border: 0px;
-  margin: 0px;
+  border-radius: 2px;
+  height: 30px;
+  width: 100%;
 }
 
 .radio-container input:checked {
-  background:#F7B1AB;
+  background: #D8AA96;
   border: 1px solid rgba(0,0,0,.1);
-  color: #262525;
+  color: rgb(232, 229, 229);
   box-shadow: 0 1px 1px #0000002e;
   text-shadow: 0 1px 0px #79485f7a;
 }
