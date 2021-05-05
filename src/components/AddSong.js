@@ -23,8 +23,8 @@ const AddSong = ({ onAdd }) => {
 
     return ( 
         <form className='add-form' onSubmit={onSubmit}>
+            <label>Song</label>
             <div className='form-control'>
-                <label>Song</label>
                 <input 
                     type='text' 
                     placeholder='Add Song Title' 
@@ -32,8 +32,8 @@ const AddSong = ({ onAdd }) => {
                     onChange={(event) => setTitle(event.target.value)} 
                 />
             </div>
+            <label>Artist</label>
             <div className='form-control'>
-                <label>Artist</label>
                 <input 
                     type='text' 
                     placeholder='Add Artist'
@@ -44,13 +44,13 @@ const AddSong = ({ onAdd }) => {
             <label>Genre</label>
             <div className='form-control radio-container'>
                 <input 
-                    label = 'Pop'
+                    label = 'Hip Hop'
                     type='radio' 
-                    id='pop' 
+                    id='hip hop' 
                     name='genre' 
-                    checked={genre === 'pop'}
+                    checked={genre === 'hip hop'}
                     value={genre}
-                    onChange={(event) => setGenre('pop')}
+                    onChange={(event) => setGenre('hip hop')}
                 />
                 <input 
                     label = 'RnB'
@@ -60,6 +60,15 @@ const AddSong = ({ onAdd }) => {
                     checked={genre === 'rnb'}
                     value={genre}
                     onChange={(event) => setGenre('rnb')}
+                />
+                <input 
+                    label = 'Bachata'
+                    type='radio' 
+                    id='bachata' 
+                    name='genre' 
+                    checked={genre === 'bachata'}
+                    value={genre}
+                    onChange={(event) => setGenre('bachata')}
                 />
             </div>
             <label> Rating</label>

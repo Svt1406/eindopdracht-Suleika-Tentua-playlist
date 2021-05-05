@@ -2,29 +2,30 @@ import { useState} from 'react';
 import Header from './components/Header';
 import Songs from './components/Songs';
 import AddSong from './components/AddSong';
+import Button from './components/Button';
 
 function App() {
   const [songs, setSongs] = useState ([
     {
         id: 1,
-        title: 'Fuego',
-        artist: 'Jabal ft. Kiana Cova',
-        genre: 'Bachata',
+        title: 'Into You',
+        artist: 'Tamia ft. Fabolous',
+        genre: 'RnB',
         rating: 3,
     },
     {
         id: 2,
-        title: 'Peaches',
-        artist: 'Justin Bieber ft. Daniel Ceasar',
-        genre: 'Pop',
-        rating: 4,
+        title: 'Juicy',
+        artist: 'The Notorious B.I.G',
+        genre: 'Hip Hop',
+        rating: 5,
     },
     {
         id: 3,
         title: 'Promise',
         artist: 'Romeo Santos ft. User',
         genre: 'Bachata',
-        rating: 5,
+        rating: 4,
     },
   ])
 
