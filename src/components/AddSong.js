@@ -41,19 +41,31 @@ const AddSong = ({ onAdd }) => {
                     onChange={(event) => setArtist(event.target.value)}
                 />
             </div>
-            <div className='form-control'>
-                <label>Genre</label>
+            <label>Genre</label>
+            <div className='form-control radio-container'>
                 <input 
-                    type='text' 
-                    placeholder='Add Genre' 
-                    value={genre} 
-                    onChange={(event) => setGenre(event.target.value)}
+                    label = 'Pop'
+                    type='radio' 
+                    id='pop' 
+                    name='genre' 
+                    checked={genre === 'pop'}
+                    value={genre}
+                    onChange={(event) => setGenre('pop')}
+                />
+                <input 
+                    label = 'RnB'
+                    type='radio' 
+                    id='rnb' 
+                    name='genre' 
+                    checked={genre === 'rnb'}
+                    value={genre}
+                    onChange={(event) => setGenre('rnb')}
                 />
             </div>
-            <div className='form-control form-control-check'>
-                <p>Rating: </p>
-                <label> 1 </label>
+            <label> Rating</label>
+            <div className='form-control radio-container'>
                 <input 
+                    label = '1'
                     type='radio' 
                     id='1' 
                     name='rate' 
@@ -61,8 +73,8 @@ const AddSong = ({ onAdd }) => {
                     value={1}
                     onChange={(event) => setRating('1')}
                 />
-                <label> 2 </label>
                 <input 
+                    label= '2'
                     type='radio' 
                     id='2' 
                     name='rate' 
@@ -70,8 +82,8 @@ const AddSong = ({ onAdd }) => {
                     value='2'
                     onChange={(event) => setRating('2')}
                 />
-                <label> 3 </label>
                 <input 
+                    label='3'
                     type='radio' 
                     id='3' 
                     name='rate' 
@@ -79,8 +91,8 @@ const AddSong = ({ onAdd }) => {
                     value='3'
                     onChange={(event) => setRating('3')}
                 />
-                <label> 4 </label>
                 <input 
+                    label='4'
                     type='radio' 
                     id='4' 
                     name='rate' 
@@ -88,8 +100,8 @@ const AddSong = ({ onAdd }) => {
                     value='4'
                     onChange={(event) => setRating('4')}
                 />
-                <label> 5 </label>
                 <input 
+                    label='5'
                     type='radio' 
                     id='5' 
                     name='rate' 

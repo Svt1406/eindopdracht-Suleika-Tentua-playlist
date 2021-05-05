@@ -75,38 +75,42 @@ body {
   margin-bottom: 40px;
 }
 
-.form-control {
-  margin: 20px 0;
-}
-
-.form-control label {
-  display: block;
-}
-
-.form-control input {
-  width: 100%;
-  height: 40px;
-  margin: 5px;
-  padding: 3px 7px;
-  font-size: 17px;
-}
-
-.form-control-check {
+.radio-container {
+  background:#F7B1AB;
+	padding: 4px;
+	position: relative;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: space-between;
+  height: 35px;
 }
 
-.form-control-check label {
-  flex: 1;
+.radio-container input {
+  font-family: 'Poppins', sans-serif;
+  width: 120px;
+  height: 100%;
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+	padding: 4px 8px;
+	background: #F7B1AB;
+	color: rgba(0,0,0,.8);
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	transition: all 100ms linear;
+  margin: 0px 5px;
 }
 
-.form-control-check input {
-  flex: 2;
-  height: 20px;
+.radio-container input:checked {
+  background-image: linear-gradient(180deg, #c1766f,#c46d66);
+	color: rgb(16, 15, 15);
+	box-shadow: 0 1px 1px #0000002e;
+	text-shadow: 0 1px 0px #79485f7a;
 }
 
-footer {
-  margin-top: 30px;
-  text-align: center;
+.radio-container input:before {
+  content: attr(label);
+	display: inline-block;
+	text-align: center;
+	width: 100%;
 }
