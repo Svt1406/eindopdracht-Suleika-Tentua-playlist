@@ -9,7 +9,7 @@ const AddSong = ({ onAdd }) => {
     const onSubmit = (event) => { 
         event.preventDefault()
     
-    if (!title) {
+    if (!title || !artist || !genre || !rating) {
         alert('Please at a song')
         return
     }
