@@ -21,9 +21,9 @@ function App() {
     },
     {
         id: 3,
-        title: 'Dansa Deng Se',
-        artist: 'Rafa',
-        genre: 'Lagu Lagu',
+        title: 'Promise',
+        artist: 'Romeo Santos ft. User',
+        genre: 'Bachata',
         rating: 5,
     },
   ])
@@ -41,18 +41,18 @@ function App() {
   }
 
   return (
-    <div className='container'>
-      <Header />
-      <AddSong onAdd={addSong}/>
-      {songs.length > 0 ? (
-        <Songs 
-          songs={songs}
-          onDelete={deleteSong}
-      /> 
-        ) : (
-          'No Songs To Show'
-    )}
-     </div>
+    <div className='body-container'>
+      <div className='left-container'>
+        <Header />
+        <AddSong onAdd={addSong}/>
+      </div>
+      <div className='right-container'>
+          <Songs 
+            songs={songs}
+            onDelete={deleteSong}
+        /> 
+      </div>
+    </div>
   );
 }
 

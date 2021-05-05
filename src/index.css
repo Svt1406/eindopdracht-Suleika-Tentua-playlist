@@ -4,44 +4,65 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #DBE6F6;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #C5796D, #DBE6F6);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #C5796D, #DBE6F6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  align-items: center;
+  background: #D8AA96;
+  color: rgba(0,0,0,.8);
+  display: grid;
+  font-size: 14px;
+  font-weight: 400;
+  height: 100vh;
+  justify-items: center;
 }
 
-.container {
-  max-width: 650px;
-  margin: 30px auto;
-  overflow: auto;
-  min-height: 350px;
-  border: 1px solid black;
-  padding: 30px;
-  border-radius: 5px;
+.body-container {
+  display: grid;
+  grid-template-areas: "left right";
+  max-width: 900px;
+}
+
+.right-container { 
+  background: #807182;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 500px;
+  height: 500px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 2px;
+}
+
+.left-container {
+  background: #F7B1AB;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255,0.5), rgba(255,255,255,0.5));
+  display: grid;
+  grid-template-areas: "." ".";
+  width: 350px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 50px;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+  color: rgba(0,0,0,.8);
+  font-size: 24px;
+  padding: 10px;
+  margin: 10px;
 }
 
 .btn {
-  display: inline-block;
-  background: deeppink;
-  color: black;
+  display: block;
+  background: black;
+  color: white;
   border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 10px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .btn:focus {
@@ -54,59 +75,68 @@ body {
 
 .btn-block {
   display: block;
-  width: 100%;
-}
-
-.song {
-  background: #eeebeb;
-  margin: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.song h3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: black;
+  width: 90%;
 }
 
 .add-form {
-  margin-bottom: 40px;
+  margin-top: -150px;
 }
 
 .form-control {
-  margin: 20px 0;
+  margin: 5px 0;
 }
 
 .form-control label {
   display: block;
+  margin: 0px 20px;
+  font-size: 16px;
 }
 
 .form-control input {
-  width: 100%;
-  height: 40px;
-  margin: 5px;
-  padding: 3px 7px;
-  font-size: 17px;
+  width: 87%;
+  height: 25px;
+  margin: 0px 20px;
+  padding: 5px;
+  font-size: 14px;
+  opacity: 0.8;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
 }
 
-.form-control-check {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.form-control input:hover, .form-control input:focus { 
+  outline: none;
 }
 
-.form-control-check label {
-  flex: 1;
+.fatimes { 
+  margin-top: 4px;
+  font-size: 12px;
+  margin-right: 10px;
 }
 
-.form-control-check input {
-  flex: 2;
-  height: 20px;
+.song-header th { 
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  color:#e9c7b9;
 }
 
-footer {
-  margin-top: 30px;
+.songlist td {
+  font-size: 12px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.no-songs { 
+  font-size: 20px;
   text-align: center;
+}
+
+.rating {
+  text-align: center;
+  padding: 0;
 }

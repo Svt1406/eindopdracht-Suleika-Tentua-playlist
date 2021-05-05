@@ -41,62 +41,37 @@ const AddSong = ({ onAdd }) => {
                     onChange={(event) => setArtist(event.target.value)}
                 />
             </div>
-            <div className='form-control'>
-                <label>Genre</label>
-                <input 
-                    type='text' 
-                    placeholder='Add Genre' 
-                    value={genre} 
-                    onChange={(event) => setGenre(event.target.value)}
-                />
+            <div className="div-select">
+            <label> Genre </label>
+                <select
+                    className='select'
+                    id="genre" 
+                    name="genre"
+                    value={genre}
+                    onChange={(event) => setGenre(event.target.value)} >
+                        <option value="choose"></option>
+                        <option value="pop"> Pop </option>
+                        <option value="rnb"> R&B </option>
+                        <option value="rock"> Rock </option>
+                        <option value="Reaggeton">Reaggeton</option>
+                        <option value="Bachata">Bachata</option>
+                </select>
             </div>
-            <div className='form-control form-control-check'>
-                <p>Rating: </p>
-                <label> 1 </label>
-                <input 
-                    type='radio' 
-                    id='1' 
-                    name='rate' 
-                    checked={rating === '1'}
-                    value={1}
-                    onChange={(event) => setRating('1')}
-                />
-                <label> 2 </label>
-                <input 
-                    type='radio' 
-                    id='2' 
-                    name='rate' 
-                    checked={rating === '2'}
-                    value='2'
-                    onChange={(event) => setRating('2')}
-                />
-                <label> 3 </label>
-                <input 
-                    type='radio' 
-                    id='3' 
-                    name='rate' 
-                    checked={rating === '3'}
-                    value='3'
-                    onChange={(event) => setRating('3')}
-                />
-                <label> 4 </label>
-                <input 
-                    type='radio' 
-                    id='4' 
-                    name='rate' 
-                    checked={rating === '4'}
-                    value='4'
-                    onChange={(event) => setRating('4')}
-                />
-                <label> 5 </label>
-                <input 
-                    type='radio' 
-                    id='5' 
-                    name='rate' 
-                    checked={rating === '5'}
-                    value= '5'
-                    onChange={(event) => setRating('5')}
-                />
+            <div className="div-select">
+            <label> Rating </label>
+                <select
+                    className='select'
+                    id="rating" 
+                    name="rating"
+                    value={rating}
+                    onChange={(event) => setRating(event.target.value)} >
+                        <option value="choose"></option>
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                </select>
             </div>
 
             <input className='btn btn-block' type='submit' value='Save Song' />
