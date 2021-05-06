@@ -2,7 +2,6 @@ import { useState} from 'react';
 import Header from './components/Header';
 import Songs from './components/Songs';
 import AddSong from './components/AddSong';
-import Button from './components/Button';
 
 function App() {
   const [songs, setSongs] = useState ([

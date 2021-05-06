@@ -9,24 +9,26 @@ const Songs = ({ songs, onDelete }) => {
                     <td>{song.title}</td>
                     <td>{song.artist}</td>
                     <td>{song.genre}</td>
-                    <td className='rating'>{song.rating}</td>
-                    <FaTimes
-                        className='fatimes'
-                        style={{ color: '#D8AA96', cursor: 'pointer'}}
-                        onClick={() => onDelete(song.id)}                
-                    />
+                    <td className='rating'>{song.rating}</td> 
+                    <td>  
+                        <FaTimes
+                            className='fatimes'
+                            style={{ color: '#D8AA96', cursor: 'pointer'}}
+                            onClick={() => onDelete(song.id)}                
+                        />  
+                    </td>
+                      
                 </tr>
             }) 
         }
     else {
         songList = (<tr className='songlist'>
-                        <h3 className='no-songs'>No songs to show</h3>
+                        <td><h3 className='no-songs'>No song to show</h3></td>
                     </tr>)
     }
 
     return ( 
         <div>
-            {/* <h1 className='playlist'>Playlist</h1> */}
             <table style={{width: "100%"}}>
                 <tbody>
                     <tr className='song-header'>
@@ -35,7 +37,7 @@ const Songs = ({ songs, onDelete }) => {
                         <th>Genre</th>
                         <th>Rating</th>
                     </tr>
-                    {songList}
+                        {songList}
                 </tbody>
             </table>
         </div>     
