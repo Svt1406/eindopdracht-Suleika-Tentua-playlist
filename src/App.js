@@ -47,11 +47,16 @@ function App() {
         <Header />
         <AddSong onAdd={addSong}/>
       </div>
-      <div className='right-container'>
-          <Songs 
-            songs={songs}
-            onDelete={deleteSong}
-        /> 
+      <div>
+        <div className='top-container'>
+          <h1>hello</h1>
+        </div>
+        <div className='right-container'>
+            <Songs 
+              songs={songs}
+              onDelete={deleteSong}
+          /> 
+        </div>
       </div>
     </div>
   );

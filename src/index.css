@@ -9,13 +9,13 @@
 
 body {
   align-items: center;
+  justify-items: center;
   background: #D8AA96;
   color: rgba(0,0,0,.8);
   display: grid;
   font-size: 14px;
   font-weight: 400;
   height: 100vh;
-  justify-items: center;
 }
 
 .body-container {
@@ -26,13 +26,38 @@ body {
 
 .right-container { 
   background: #807182;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
   text-align: left;
   width: 500px;
   height: 500px;
-  border-top-right-radius: 50px;
   border-bottom-right-radius: 2px;
+}
+
+.top-container {
+  background: #807182;
+  border-top-right-radius: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#e9c7b9;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #F7B1AB;
 }
 
 .left-container {
@@ -77,6 +102,21 @@ body {
 .btn-block {
   display: block;
   width: 95%;
+}
+
+.filter-btn {
+  display: inline-block;
+  background: #D8AA96;
+  color: rgb(232, 229, 229);
+  border: none;
+  padding: 5px 15px;
+  margin-top: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 2px;
 }
 
 .add-form {
@@ -166,7 +206,7 @@ label {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  padding-top: 25px;
+  padding-top: 5px;
   padding-bottom: 10px;
   padding-left: 10px;
   color:#e9c7b9;

@@ -5,7 +5,7 @@ const Songs = ({ songs, onDelete }) => {
     let songList
     if (songs.length > 0) {
         songList = songs.map((song) => {    
-        return <tr className='songlist' key={song.id}>
+        return  <tr className='songlist' key={song.id}>
                     <td>{song.title}</td>
                     <td>{song.artist}</td>
                     <td>{song.genre}</td>
@@ -16,9 +16,8 @@ const Songs = ({ songs, onDelete }) => {
                         onClick={() => onDelete(song.id)}                
                     />
                 </tr>
-    
-        }) 
-    }
+            }) 
+        }
     else {
         songList = (<tr className='songlist'>
                         <h3 className='no-songs'>No songs to show</h3>
